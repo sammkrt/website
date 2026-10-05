@@ -8,8 +8,8 @@
   <meta property="og:title" content="Samet Kurt — .NET Backend Developer">
   <meta property="og:description" content="Mechanical engineering roots. Software engineering focus. Selected work and the story behind it.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://samet-kurt.samkrt.chatgpt.site">
-  <link rel="canonical" href="https://samet-kurt.samkrt.chatgpt.site">
+  <meta property="og:url" content="https://sammkrt.github.io/website/">
+  <link rel="canonical" href="https://sammkrt.github.io/website/">
   <title>Samet Kurt — .NET Backend Developer</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23173de8'/%3E%3Ctext x='32' y='43' text-anchor='middle' fill='white' font-family='Arial,sans-serif' font-size='29' font-weight='700'%3ESK%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="./styles.css">
@@ -48,13 +48,112 @@
     </section>
     <div class="intro-band"><div class="container"><p>Mechanical engineering roots.<br><strong>Software engineering focus.</strong></p><p class="band-detail">3+ years building with .NET<br><span>APIs, identity, data & delivery</span></p><span class="band-mark" aria-hidden="true">SK /</span></div></div>
     <section id="work" class="section container" aria-labelledby="work-heading">
-      <div class="section-heading"><div><div class="eyebrow">01 / SELECTED WORK</div><h2 id="work-heading">The work behind<br>the interface.</h2></div><p>My work at Crowdtech spans survey and community platforms. These are a few of the engineering problems I’ve contributed to solving.</p></div>
+      <div class="section-heading"><div><div class="eyebrow">01 / SELECTED WORK</div><h2 id="work-heading">Selected production engineering</h2></div><p>My work at Crowdtech goes beyond implementing endpoints. I contribute across application state, identity, data, deployment, and production stability for survey and community platforms.</p></div>
       <div class="project-grid">
-        <article class="project-card"><div class="project-top"><span>01</span><span>PLATFORM ENGINEERING</span></div><h3>Making state work<br>across servers.</h3><p>Moving import and export workflows away from server-bound session state.</p><div class="tags"><span>ASP.NET Core</span><span>Caching</span><span>Refactoring</span></div><details><summary>Inside the work<span class="details-icon" aria-hidden="true"></span></summary><div class="project-detail"><h4>The challenge</h4><p>Workflows that rely on an HTTP session are harder to reason about when requests can reach different servers.</p><h4>My contribution</h4><p>Helped replace session dependencies with explicit state management and cache-backed import and export flows, then verified the changes in acceptance testing.</p><h4>Why it matters</h4><p>State has a clearer home, and the workflow relies less on a particular web server.</p></div></details></article>
-        <article class="project-card"><div class="project-top"><span>02</span><span>SECURITY & IDENTITY</span></div><h3>Getting the access<br>details right.</h3><p>Working on authentication, permissions, and the boundaries between users and data.</p><div class="tags"><span>Authentication</span><span>Authorization</span><span>Azure</span></div><details><summary>Inside the work<span class="details-icon" aria-hidden="true"></span></summary><div class="project-detail"><h4>The challenge</h4><p>Identity flows connect application logic, configuration, and infrastructure. Small inconsistencies can interrupt the user’s experience.</p><h4>My contribution</h4><p>Worked on authentication flows, permission handling, data-retention settings, and production troubleshooting across services and environments.</p><h4>Why it matters</h4><p>Users need predictable access, and teams need to understand how that access is controlled.</p></div></details></article>
-        <article class="project-card"><div class="project-top"><span>03</span><span>DELIVERY & OPERATIONS</span></div><h3>Keeping releases<br>predictable.</h3><p>Connecting backend development with the realities of deployment and production support.</p><div class="tags"><span>Azure DevOps</span><span>IIS</span><span>CI/CD</span></div><details><summary>Inside the work<span class="details-icon" aria-hidden="true"></span></summary><div class="project-detail"><h4>The challenge</h4><p>A release touches more than code: pipelines, configuration, web servers, and existing application behavior all have to line up.</p><h4>My contribution</h4><p>Contributed to CI/CD improvements and multi-server release workflows, and investigated production issues across APIs, databases, and integrations.</p><h4>Why it matters</h4><p>The job continues after the pull request. Understanding delivery helps make better development decisions.</p></div></details></article>
+        <article class="project-card">
+          <div class="project-top"><span>01</span><span>PLATFORM ARCHITECTURE</span></div>
+          <h3>Removing server-bound session state</h3>
+          <p>Refactoring import and export workflows so they could operate reliably across multiple application servers.</p>
+          <div class="tags"><span>.NET 8</span><span>ASP.NET Core</span><span>Caching</span><span>State management</span><span>Refactoring</span><span>Acceptance testing</span></div>
+          <details>
+            <summary aria-label="Inside the work: Removing server-bound session state">Inside the work<span class="details-icon" aria-hidden="true"></span></summary>
+            <div class="project-detail">
+              <h4>The challenge</h4>
+              <p>Parts of the survey platform depended on <code>HttpContext.Session</code>. In a multi-server environment, this tied workflow state to a particular web server and made behaviour harder to predict when requests moved between servers.</p>
+              <h4>My contribution</h4>
+              <p>I worked on removing the session dependency from import and export workflows. The new approach used explicit state management and cache-backed storage. My work also included acceptance testing of the migrated workflows.</p>
+              <h4>Why it matters</h4>
+              <p>Application state has a clearer owner, and the workflows are better suited to a load-balanced environment.</p>
+            </div>
+          </details>
+        </article>
+        <article class="project-card">
+          <div class="project-top"><span>02</span><span>SECURITY &amp; IDENTITY</span></div>
+          <h3>Strengthening authentication behaviour</h3>
+          <p>Improving authentication reliability and reducing information leakage across identity flows.</p>
+          <div class="tags"><span>ASP.NET Core</span><span>OpenIddict</span><span>Entra ID</span><span>Authentication</span><span>Authorization</span><span>Timing consistency</span></div>
+          <details>
+            <summary aria-label="Inside the work: Strengthening authentication behaviour">Inside the work<span class="details-icon" aria-hidden="true"></span></summary>
+            <div class="project-detail">
+              <h4>The challenge</h4>
+              <p>Authentication behaviour depended on several application and infrastructure settings. Small configuration differences could interrupt login flows, while inconsistent response timing could reveal whether a user account existed.</p>
+              <h4>My contribution</h4>
+              <p>I investigated authentication failures across environments, worked on OpenIddict and Entra ID integration issues, and contributed to constant-time handling that reduced the risk of user-enumeration through response timing.</p>
+              <h4>Why it matters</h4>
+              <p>Authentication should behave consistently without revealing unnecessary information about users or internal configuration.</p>
+            </div>
+          </details>
+        </article>
+        <article class="project-card">
+          <div class="project-top"><span>03</span><span>DELIVERY &amp; OPERATIONS</span></div>
+          <h3>Safer multi-server deployments</h3>
+          <p>Supporting a staged deployment approach for an IIS and Application Request Routing environment.</p>
+          <div class="tags"><span>Azure DevOps</span><span>IIS</span><span>ARR</span><span>PowerShell</span><span>Health checks</span><span>Traffic draining</span><span>Staged deployment</span></div>
+          <details>
+            <summary aria-label="Inside the work: Safer multi-server deployments">Inside the work<span class="details-icon" aria-hidden="true"></span></summary>
+            <div class="project-detail">
+              <h4>The challenge</h4>
+              <p>Deploying to several production web servers requires coordinating application availability, traffic routing, health checks, and differences between server environments.</p>
+              <h4>My contribution</h4>
+              <p>I worked with a staged deployment approach in which traffic could be drained from selected servers, a release could be applied and validated, and capacity could be returned gradually. I also investigated deployment failures and environment-specific behaviour.</p>
+              <h4>Why it matters</h4>
+              <p>A controlled rollout makes failures easier to isolate and reduces the operational risk of releasing to all servers simultaneously.</p>
+            </div>
+          </details>
+        </article>
+        <article class="project-card">
+          <div class="project-top"><span>04</span><span>CLOUD CONFIGURATION</span></div>
+          <h3>Loading secrets at the correct startup stage</h3>
+          <p>Resolving an authentication failure caused by application configuration being loaded too late.</p>
+          <div class="tags"><span>Azure Key Vault</span><span>Entra ID</span><span>ASP.NET Core configuration</span><span>Dependency initialization</span><span>Production debugging</span></div>
+          <details>
+            <summary aria-label="Inside the work: Loading secrets at the correct startup stage">Inside the work<span class="details-icon" aria-hidden="true"></span></summary>
+            <div class="project-detail">
+              <h4>The challenge</h4>
+              <p>After authentication secrets were moved into Azure Key Vault, an application could no longer complete its login configuration because the required values were unavailable when authentication services were initialized.</p>
+              <h4>My contribution</h4>
+              <p>I traced the failure through the application startup sequence and corrected when the Key Vault configuration was loaded, making the authentication settings available before the dependent services were registered.</p>
+              <h4>Why it matters</h4>
+              <p>Secret management only works reliably when configuration is available at the point where dependent services are created.</p>
+            </div>
+          </details>
+        </article>
+        <article class="project-card">
+          <div class="project-top"><span>05</span><span>DATA INFRASTRUCTURE</span></div>
+          <h3>Consolidating database environments</h3>
+          <p>Supporting the migration of an acceptance environment to a consolidated SQL Server setup.</p>
+          <div class="tags"><span>SQL Server</span><span>Linked servers</span><span>Configuration management</span><span>Environment migration</span><span>Validation</span></div>
+          <details>
+            <summary aria-label="Inside the work: Consolidating database environments">Inside the work<span class="details-icon" aria-hidden="true"></span></summary>
+            <div class="project-detail">
+              <h4>The challenge</h4>
+              <p>Applications and database routines depended on connections between several database environments. Consolidation required updating those dependencies without leaving active connections to the previous environment.</p>
+              <h4>My contribution</h4>
+              <p>I worked on updating the relevant database connections and linked-server configuration, validating the acceptance environment, and helping retire the previous setup after verification.</p>
+              <h4>Why it matters</h4>
+              <p>Consolidation reduces configuration drift and makes the data environment easier to operate and maintain.</p>
+            </div>
+          </details>
+        </article>
+        <article class="project-card">
+          <div class="project-top"><span>06</span><span>DATA PRIVACY</span></div>
+          <h3>Privacy-aware data retention</h3>
+          <p>Working on anonymization and retention behaviour while preserving valid relationships between survey and community data.</p>
+          <div class="tags"><span>.NET</span><span>SQL Server</span><span>GDPR-related retention behaviour</span><span>Anonymization</span><span>Retention policies</span><span>Relational data integrity</span></div>
+          <details>
+            <summary aria-label="Inside the work: Privacy-aware data retention">Inside the work<span class="details-icon" aria-hidden="true"></span></summary>
+            <div class="project-detail">
+              <h4>The challenge</h4>
+              <p>Removing or anonymizing personal data must respect privacy requirements while preserving the non-personal relationships the platform still needs for correct operation and reporting.</p>
+              <h4>My contribution</h4>
+              <p>I worked on unsubscribe, anonymization, and retention behaviour, including cases where survey and community records remained related after personal information was removed.</p>
+              <h4>Why it matters</h4>
+              <p>Privacy features need to protect personal information without damaging the structural integrity of the remaining platform data.</p>
+            </div>
+          </details>
+        </article>
       </div>
-      <p class="work-note">Work summaries focus on my contributions. Employer code and internal system details stay private.</p>
+      <p class="work-note">These summaries describe my engineering contributions without exposing employer code, customer information, internal addresses, or confidential implementation details.</p>
     </section>
     <section id="about" class="about-section" aria-labelledby="about-heading"><div class="container about-grid">
       <div class="about-copy"><div class="eyebrow">02 / A DIFFERENT ROUTE</div><h2 id="about-heading">An engineer,<br>before the code.</h2><p class="about-lead">I didn’t start in software. I started with a mechanical engineering degree and a curiosity about how things work.</p><p>Over the following years, I worked in technical support, training, sales, and business development. That taught me to ask better questions, communicate clearly, and connect technical decisions to real needs.</p><p>I brought that perspective into software through SALT’s full-stack .NET bootcamp. Today, I build backend systems at Crowdtech, where I became a medior developer in 2026.</p><div class="about-signature">Samet Kurt <span>Engineer. Developer. Problem solver.</span></div></div>
@@ -67,7 +166,7 @@
     </div></section>
     <section id="toolkit" class="section container" aria-labelledby="toolkit-heading">
       <div class="section-heading toolkit-heading"><div><div class="eyebrow">03 / MY TOOLKIT</div><h2 id="toolkit-heading">Tools with<br>a purpose.</h2></div><p>Backend is my home base. I also care about the frontend, the release process, and what happens when the system is running.</p></div>
-      <div class="toolkit-grid"><div class="toolkit-list"><div class="skill-row"><span class="skill-number">01</span><div><h3>Backend & APIs</h3><p>C# · .NET · ASP.NET Core · REST APIs</p></div></div><div class="skill-row"><span class="skill-number">02</span><div><h3>Data & persistence</h3><p>SQL Server · Entity Framework · Dapper</p></div></div><div class="skill-row"><span class="skill-number">03</span><div><h3>Cloud & delivery</h3><p>Azure · Key Vault · Azure DevOps · CI/CD · IIS</p></div></div><div class="skill-row"><span class="skill-number">04</span><div><h3>Across the stack</h3><p>TypeScript · React · Vue · Automated testing</p></div></div></div>
+      <div class="toolkit-grid"><div class="toolkit-list"><div class="skill-row"><span class="skill-number">01</span><div><h3>Backend & APIs</h3><p>C# · .NET 8 · ASP.NET Core · REST APIs · Automated testing</p></div></div><div class="skill-row"><span class="skill-number">02</span><div><h3>Data & persistence</h3><p>SQL Server · Entity Framework · Dapper</p></div></div><div class="skill-row"><span class="skill-number">03</span><div><h3>Identity & configuration</h3><p>OpenIddict · Entra ID · Azure Key Vault</p></div></div><div class="skill-row"><span class="skill-number">04</span><div><h3>Cloud & delivery</h3><p>Azure · Azure DevOps · IIS · ARR · CI/CD</p></div></div><div class="skill-row"><span class="skill-number">05</span><div><h3>Across the stack</h3><p>TypeScript · Vue · React</p></div></div></div>
       <aside class="now-card"><div class="eyebrow">CURRENTLY EXPLORING</div><h3>AI that earns<br>its place in<br>the workflow<span>.</span></h3><p>I’m exploring how coding agents and GitHub Copilot can help with everyday development, including an AI-driven test suggestion bot for pull requests.</p><div class="now-footer"><span>In progress</span><span>Learning by building</span></div></aside></div>
     </section>
     <section id="contact" class="contact-section" aria-labelledby="contact-heading"><div class="container"><div class="contact-top"><div class="eyebrow">04 / LET’S CONNECT</div><span>BASED IN THE NETHERLANDS</span></div><div class="contact-grid"><div><h2 id="contact-heading">What are<br>you building<span>?</span></h2><p>If you’re working on a product where thoughtful backend engineering matters, I’d like to hear about it.</p></div><div class="contact-actions"><a class="contact-email" href="mailto:samet.krt@gmail.com">samet.krt@gmail.com</a><button class="copy-email" type="button" data-copy-email="samet.krt@gmail.com"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V4H4v12h4"/></svg><span>Copy email</span></button><div class="social-links"><a href="https://www.linkedin.com/in/samet-kurt123/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/sammkrt" target="_blank" rel="noopener noreferrer">GitHub</a></div><span class="copy-status" role="status" aria-live="polite"></span></div></div></div></section>
