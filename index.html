@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173de8">
+  <meta name="description" content="Samet Kurt is a .NET backend developer in Almere, Netherlands. Explore his work on production platforms, authentication, delivery, and practical AI for engineering.">
+  <meta property="og:title" content="Samet Kurt — .NET Backend Developer">
+  <meta property="og:description" content="Mechanical engineering roots. Software engineering focus. Selected work and the story behind it.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://samet-kurt.samkrt.chatgpt.site">
+  <link rel="canonical" href="https://samet-kurt.samkrt.chatgpt.site">
+  <title>Samet Kurt — .NET Backend Developer</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23173de8'/%3E%3Ctext x='32' y='43' text-anchor='middle' fill='white' font-family='Arial,sans-serif' font-size='29' font-weight='700'%3ESK%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="Samet Kurt, home"><span class="brand-mark">sk.</span><span>Samet Kurt</span></a>
+      <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a><a href="#toolkit">Toolkit</a><a class="nav-contact" href="#contact">Let’s talk</a></nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero container" aria-labelledby="hero-heading">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="small-line"></span>.NET BACKEND DEVELOPER</div>
+        <h1 id="hero-heading">Engineering<br>for the<br><span class="blue-text">real world<span class="orange-text">.</span></span></h1>
+        <p class="hero-description">Hi, I’m Samet. I build the backend behind useful products, with an engineer’s eye for how the whole system works.</p>
+        <div class="hero-actions"><a class="button button-blue" href="#work">Explore my work</a><a class="text-link" href="https://www.linkedin.com/in/samet-kurt123/" target="_blank" rel="noopener noreferrer">Find me on LinkedIn</a></div>
+        <div class="location"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Almere, Netherlands <span>·</span> Currently at Crowdtech</div>
+      </div>
+      <div class="system-panel">
+        <div class="panel-top"><span>01 / MY WAY OF THINKING</span><span class="panel-symbol" aria-hidden="true">{ }</span></div>
+        <h2>Good software.<br>Connected thinking.</h2>
+        <p class="panel-description">From the user’s request to the data behind it.</p>
+        <div class="architecture" role="img" aria-label="A web client sends a request to an ASP.NET Core API, which connects to identity services and a SQL Server database.">
+          <div class="diagram-node client-node"><span class="node-label">EXPERIENCE</span><strong>Web client</strong><span class="node-meta">Where the user starts</span></div>
+          <div class="connector"><span>HTTP / REST</span></div>
+          <div class="diagram-node api-node"><span class="node-label">THE BACKEND</span><strong>ASP.NET Core</strong><span class="node-meta">C# · APIs · Business logic</span></div>
+          <div class="branch-connectors" aria-hidden="true"></div>
+          <div class="diagram-bottom"><div class="diagram-node"><span class="node-label">TRUST</span><strong>Identity</strong><span class="node-meta">Auth & permissions</span></div><div class="diagram-node"><span class="node-label">DATA</span><strong>SQL Server</strong><span class="node-meta">EF & Dapper</span></div></div>
+        </div>
+        <div class="panel-bottom"><span>Understand the system.</span><span>Own the details.</span></div>
+      </div>
+    </section>
+    <div class="intro-band"><div class="container"><p>Mechanical engineering roots.<br><strong>Software engineering focus.</strong></p><p class="band-detail">3+ years building with .NET<br><span>APIs, identity, data & delivery</span></p><span class="band-mark" aria-hidden="true">SK /</span></div></div>
+    <section id="work" class="section container" aria-labelledby="work-heading">
+      <div class="section-heading"><div><div class="eyebrow">01 / SELECTED WORK</div><h2 id="work-heading">The work behind<br>the interface.</h2></div><p>My work at Crowdtech spans survey and community platforms. These are a few of the engineering problems I’ve contributed to solving.</p></div>
+      <div class="project-grid">
+        <article class="project-card"><div class="project-top"><span>01</span><span>PLATFORM ENGINEERING</span></div><h3>Making state work<br>across servers.</h3><p>Moving import and export workflows away from server-bound session state.</p><div class="tags"><span>ASP.NET Core</span><span>Caching</span><span>Refactoring</span></div><details><summary>Inside the work<span class="details-icon" aria-hidden="true"></span></summary><div class="project-detail"><h4>The challenge</h4><p>Workflows that rely on an HTTP session are harder to reason about when requests can reach different servers.</p><h4>My contribution</h4><p>Helped replace session dependencies with explicit state management and cache-backed import and export flows, then verified the changes in acceptance testing.</p><h4>Why it matters</h4><p>State has a clearer home, and the workflow relies less on a particular web server.</p></div></details></article>
+        <article class="project-card"><div class="project-top"><span>02</span><span>SECURITY & IDENTITY</span></div><h3>Getting the access<br>details right.</h3><p>Working on authentication, permissions, and the boundaries between users and data.</p><div class="tags"><span>Authentication</span><span>Authorization</span><span>Azure</span></div><details><summary>Inside the work<span class="details-icon" aria-hidden="true"></span></summary><div class="project-detail"><h4>The challenge</h4><p>Identity flows connect application logic, configuration, and infrastructure. Small inconsistencies can interrupt the user’s experience.</p><h4>My contribution</h4><p>Worked on authentication flows, permission handling, data-retention settings, and production troubleshooting across services and environments.</p><h4>Why it matters</h4><p>Users need predictable access, and teams need to understand how that access is controlled.</p></div></details></article>
+        <article class="project-card"><div class="project-top"><span>03</span><span>DELIVERY & OPERATIONS</span></div><h3>Keeping releases<br>predictable.</h3><p>Connecting backend development with the realities of deployment and production support.</p><div class="tags"><span>Azure DevOps</span><span>IIS</span><span>CI/CD</span></div><details><summary>Inside the work<span class="details-icon" aria-hidden="true"></span></summary><div class="project-detail"><h4>The challenge</h4><p>A release touches more than code: pipelines, configuration, web servers, and existing application behavior all have to line up.</p><h4>My contribution</h4><p>Contributed to CI/CD improvements and multi-server release workflows, and investigated production issues across APIs, databases, and integrations.</p><h4>Why it matters</h4><p>The job continues after the pull request. Understanding delivery helps make better development decisions.</p></div></details></article>
+      </div>
+      <p class="work-note">Work summaries focus on my contributions. Employer code and internal system details stay private.</p>
+    </section>
+    <section id="about" class="about-section" aria-labelledby="about-heading"><div class="container about-grid">
+      <div class="about-copy"><div class="eyebrow">02 / A DIFFERENT ROUTE</div><h2 id="about-heading">An engineer,<br>before the code.</h2><p class="about-lead">I didn’t start in software. I started with a mechanical engineering degree and a curiosity about how things work.</p><p>Over the following years, I worked in technical support, training, sales, and business development. That taught me to ask better questions, communicate clearly, and connect technical decisions to real needs.</p><p>I brought that perspective into software through SALT’s full-stack .NET bootcamp. Today, I build backend systems at Crowdtech, where I became a medior developer in 2026.</p><div class="about-signature">Samet Kurt <span>Engineer. Developer. Problem solver.</span></div></div>
+      <ol class="timeline" aria-label="Career journey">
+        <li><span class="timeline-date">2008–2013</span><h3>Learning to think in systems</h3><p>BSc Mechanical Engineering<br>Yıldız Technical University</p></li>
+        <li><span class="timeline-date">2014–2022</span><h3>Where technology meets people</h3><p>Technical roles at 3bfab and Vaillant, followed by sales and business development at Iklimsa.</p></li>
+        <li><span class="timeline-date">2022–2023</span><h3>A deliberate move into software</h3><p>SALT full-stack .NET bootcamp: C#, APIs, React, testing, and collaborative development.</p></li>
+        <li class="timeline-current"><span class="timeline-date">2023–PRESENT</span><h3>Building at Crowdtech</h3><p>Backend development for survey and community products. Promoted to medior in February 2026.</p></li>
+      </ol>
+    </div></section>
+    <section id="toolkit" class="section container" aria-labelledby="toolkit-heading">
+      <div class="section-heading toolkit-heading"><div><div class="eyebrow">03 / MY TOOLKIT</div><h2 id="toolkit-heading">Tools with<br>a purpose.</h2></div><p>Backend is my home base. I also care about the frontend, the release process, and what happens when the system is running.</p></div>
+      <div class="toolkit-grid"><div class="toolkit-list"><div class="skill-row"><span class="skill-number">01</span><div><h3>Backend & APIs</h3><p>C# · .NET · ASP.NET Core · REST APIs</p></div></div><div class="skill-row"><span class="skill-number">02</span><div><h3>Data & persistence</h3><p>SQL Server · Entity Framework · Dapper</p></div></div><div class="skill-row"><span class="skill-number">03</span><div><h3>Cloud & delivery</h3><p>Azure · Key Vault · Azure DevOps · CI/CD · IIS</p></div></div><div class="skill-row"><span class="skill-number">04</span><div><h3>Across the stack</h3><p>TypeScript · React · Vue · Automated testing</p></div></div></div>
+      <aside class="now-card"><div class="eyebrow">CURRENTLY EXPLORING</div><h3>AI that earns<br>its place in<br>the workflow<span>.</span></h3><p>I’m exploring how coding agents and GitHub Copilot can help with everyday development, including an AI-driven test suggestion bot for pull requests.</p><div class="now-footer"><span>In progress</span><span>Learning by building</span></div></aside></div>
+    </section>
+    <section id="contact" class="contact-section" aria-labelledby="contact-heading"><div class="container"><div class="contact-top"><div class="eyebrow">04 / LET’S CONNECT</div><span>BASED IN THE NETHERLANDS</span></div><div class="contact-grid"><div><h2 id="contact-heading">What are<br>you building<span>?</span></h2><p>If you’re working on a product where thoughtful backend engineering matters, I’d like to hear about it.</p></div><div class="contact-actions"><a class="contact-email" href="mailto:samet.krt@gmail.com">samet.krt@gmail.com</a><button class="copy-email" type="button" data-copy-email="samet.krt@gmail.com"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V4H4v12h4"/></svg><span>Copy email</span></button><div class="social-links"><a href="https://www.linkedin.com/in/samet-kurt123/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/sammkrt" target="_blank" rel="noopener noreferrer">GitHub</a></div><span class="copy-status" role="status" aria-live="polite"></span></div></div></div></section>
+  </main>
+  <footer class="site-footer container"><a class="brand footer-brand" href="#" aria-label="Back to top"><span class="brand-mark">sk.</span><span>Samet Kurt</span></a><span>Built with an engineer’s mindset.</span><span>© 2026 Samet Kurt</span></footer>
+</body>
+</html>
